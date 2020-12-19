@@ -1,0 +1,41 @@
+## random
+
+    import java.util.Random;
+    创建对象
+    Random r = Random();
+    for (int i = 0; i < 10; i ++){
+      int number = r.nextInt(10);
+      System.out.println(number);
+    }
+    获取随机数
+    int number = r.nextInt(10); //包括0不包括100
+    System.out.println(number);
+    
+    获取 1 - 101 的数字
+    int x = r.nextInt(100) + 1
+
+## 猜数字
+1. 需要一个要猜的数字
+2. 反复运行来猜
+3. 需要键盘录入来实现
+4. 分支判断，来用break 来结束
+
+  import java.util.Random;
+  import java.util.Scanner;
+  
+    Random r = new Random();
+    int number = r.nextInt(100) + 1;
+    while(true){
+      Scanner sc = new Scanner(System.in);
+      System.out.printly("your number ");
+      int guessNumber = sc.nextInt();
+
+      if (guessNumber > number){
+        System.out.printly(" your number is large");
+      } else if (guessNumber < number){
+        System.out.printly(" your number is samll");
+      } else{
+        System.out.printly(" your number is correct");
+        break;
+      }
+    }

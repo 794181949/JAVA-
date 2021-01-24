@@ -26,10 +26,15 @@ concat(stream a, stream b) 可以连接两个流 是一个静态方法
 
 distinct() 返回由该流的不同元素，组成的流，这样就不会有重复的流
 
+sorted() 可以返回由此元素自然排序组成的流
 
+sorted( comparator ) 根据接口中的方法排序 eg (s1,s2)-> {int num = s1.length() - s2.length(); return num==0?s1.compartTo(s2);
 
+map(function mapper)返回有给定函数应用于此流的元素结果组成的流
 
+mapToInt(ToIntFunction mapper); 返回intstream其中包含将给定函数应用此流的元素结果，流中里面用sum方法 eg mapToint(Integer::parseInt).sum();
 
+终结操作 forEach() eg forEach(System.out::println);
 
-终结操作 forEach()
+count() 技术流中的个数,  long count = filter().count();;
 
